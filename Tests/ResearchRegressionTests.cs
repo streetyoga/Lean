@@ -275,8 +275,6 @@ namespace QuantConnect.Tests
 
         private static TestCaseData[] GetResearchRegressionTestParameters()
         {
-            TestGlobals.Initialize();
-
             // since these are static test cases, they are executed before test setup
             AssemblyInitialize.AdjustCurrentDirectory();
             var result = GetResearchTemplates()
