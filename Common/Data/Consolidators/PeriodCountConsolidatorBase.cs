@@ -380,10 +380,10 @@ namespace QuantConnect.Data.Consolidators
 
             public FuncPeriodSpecification(Func<DateTime, CalendarInfo> expiryFunc)
             {
-                if (expiryFunc(DateTime.Now).Start > DateTime.Now)
-                {
-                    throw new ArgumentException($"{nameof(FuncPeriodSpecification)}: Please use a function that computes a date/time in the past (e.g.: Time.StartOfWeek and Time.StartOfMonth)");
-                }
+                //if (expiryFunc(DateTime.Now).Start > DateTime.Now)
+                //{
+                //    throw new ArgumentException($"{nameof(FuncPeriodSpecification)}: Please use a function that computes a date/time in the past (e.g.: Time.StartOfWeek and Time.StartOfMonth)");
+                //}
                 _calendarInfoFunc = expiryFunc;
             }
 
